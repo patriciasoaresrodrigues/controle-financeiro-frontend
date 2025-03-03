@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-revenue',
   templateUrl: './revenue.component.html',
-  styleUrls: ['./revenue.component.css']
+  styleUrls: ['./revenue.component.css'],
 })
 export class RevenueComponent {
-
+  toDo() {
+    console.log('ToDo');
+  }
 }
