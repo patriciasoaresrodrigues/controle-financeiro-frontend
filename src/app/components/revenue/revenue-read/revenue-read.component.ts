@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Revenue } from '../revenue.model';
+import { RevenueService } from '../revenue.service';
 
 @Component({
   selector: 'app-revenue-read',
@@ -7,6 +8,7 @@ import { Revenue } from '../revenue.model';
   styleUrls: ['./revenue-read.component.css'],
 })
 export class RevenueReadComponent implements OnInit {
+  constructor(private service: RevenueService) {}
   receitas: Revenue[] = [];
   displayedColumns: string[] = [
     'id',
@@ -17,23 +19,18 @@ export class RevenueReadComponent implements OnInit {
     'payDate',
     'action',
   ];
+  isLoading = true;
   ngOnInit(): void {
-    this.receitas = [
-      {
-        id: '123',
-        name: 'Xuxu',
-        company: 'Meli',
-        amount: 1000,
-        dueDate: new Date(),
+    this.service.getAll().subscribe(
+      (revenues) => {
+        this.isLoading = false;
+        this.receitas = revenues;
       },
-      {
-        id: '234',
-        name: 'Kikona',
-        company: 'Meli',
-        amount: 10000,
-        dueDate: new Date(),
-        payDate: new Date(),
-      },
-    ];
+      (error) => {
+        console.log(error);
+
+        this.isLoading = false;
+      }
+    );
   }
 }

@@ -27,6 +27,9 @@ import { RevenueDeleteComponent } from './components/revenue/revenue-delete/reve
 import { FormsModule } from '@angular/forms';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { NgxCurrencyDirective } from 'ngx-currency';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -59,6 +62,9 @@ import { NgxCurrencyDirective } from 'ngx-currency';
     MatDatepickerModule,
     MatNativeDateModule,
     NgxCurrencyDirective,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    HttpClientModule,
   ],
   providers: [
     MatDatepickerModule,
