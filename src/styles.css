@@ -30,3 +30,18 @@ body {
   background-color: #e35e6b;
   color: white;
 }
+
+.deletar {
+  background-color: #e35e6b !important;
+  color: #fff !important;
+}
+
+.salvar {
+  background-color: #21845e !important;
+  color: #fff !important;
+}
+
+.cancelar {
+  background-color: #ccc !important;
+  color: #000 !important;
+}

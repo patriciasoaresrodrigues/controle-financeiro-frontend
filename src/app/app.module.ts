@@ -11,12 +11,22 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RedDirective } from './directives/red.directive';
 import { HomeComponent } from './views/home/home.component';
 import { RevenueComponent } from './views/revenue/revenue.component';
 import { ExpenseComponent } from './views/expense/expense.component';
 import { RevenueReadComponent } from './components/revenue/revenue-read/revenue-read.component';
+import { RevenueCreateComponent } from './components/revenue/revenue-create/revenue-create.component';
+import { RevenueEditComponent } from './components/revenue/revenue-edit/revenue-edit.component';
+import { RevenueDeleteComponent } from './components/revenue/revenue-delete/revenue-delete.component';
+import { FormsModule } from '@angular/forms';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { NgxCurrencyDirective } from 'ngx-currency';
 
 @NgModule({
   declarations: [
@@ -29,6 +39,9 @@ import { RevenueReadComponent } from './components/revenue/revenue-read/revenue-
     RevenueComponent,
     ExpenseComponent,
     RevenueReadComponent,
+    RevenueCreateComponent,
+    RevenueEditComponent,
+    RevenueDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +52,18 @@ import { RevenueReadComponent } from './components/revenue/revenue-read/revenue-
     MatListModule,
     MatButtonModule,
     MatTableModule,
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxCurrencyDirective,
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
