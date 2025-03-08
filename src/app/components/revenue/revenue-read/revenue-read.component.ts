@@ -11,7 +11,6 @@ export class RevenueReadComponent implements OnInit {
   constructor(private service: RevenueService) {}
   receitas: Revenue[] = [];
   displayedColumns: string[] = [
-    'id',
     'name',
     'company',
     'amount',
