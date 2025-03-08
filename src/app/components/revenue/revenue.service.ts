@@ -11,7 +11,7 @@ import { catchError, map } from 'rxjs/operators';
 export class RevenueService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'applications/json',
+      'Content-Type': 'application/json',
       Accept: 'application/json',
     }),
   };
