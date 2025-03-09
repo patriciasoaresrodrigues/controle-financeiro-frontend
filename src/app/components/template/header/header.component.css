@@ -4,6 +4,7 @@
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
+  background-color: #cceddb;
 }
 
 .header a {
@@ -14,7 +15,11 @@
 }
 
 .header .logo {
-  max-height: 32px;
+  max-height: 48px;
+  margin-left: 60px;
+}
+.logo-titulo {
+  margin-left: 80px;
 }
 
 .header .title-group {

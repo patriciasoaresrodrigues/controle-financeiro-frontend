@@ -1,5 +1,13 @@
 .sidenav {
-  background-color: #cceddb;
+  /* background-color: #cceddb; */
+  background-color: #afcebd;
+  background: linear-gradient(
+    180deg,
+    rgba(204, 237, 219, 1) 20%,
+    rgba(175, 206, 189, 1) 60%,
+    rgba(119, 168, 141, 1) 100%
+  );
+
   width: 200px;
 }
 
