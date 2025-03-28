@@ -32,6 +32,10 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ExpenseCreateComponent } from './components/expense/expense-create/expense-create.component';
+import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
+import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
+import { ExpenseReadComponent } from './components/expense/expense-read/expense-read.component';
 
 registerLocaleData(ptBr);
 
@@ -49,6 +53,10 @@ registerLocaleData(ptBr);
     RevenueCreateComponent,
     RevenueEditComponent,
     RevenueDeleteComponent,
+    ExpenseReadComponent,
+    ExpenseCreateComponent,
+    ExpenseEditComponent,
+    ExpenseDeleteComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+.edit {
+  text-decoration: none;
+  color: #21845e;
+}
+.delete {
+  text-decoration: none;
+  color: #e35e6b;
+}
+.spinner {
+  margin: 5px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
