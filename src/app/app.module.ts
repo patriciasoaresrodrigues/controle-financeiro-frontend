@@ -36,6 +36,11 @@ import { ExpenseCreateComponent } from './components/expense/expense-create/expe
 import { ExpenseDeleteComponent } from './components/expense/expense-delete/expense-delete.component';
 import { ExpenseEditComponent } from './components/expense/expense-edit/expense-edit.component';
 import { ExpenseReadComponent } from './components/expense/expense-read/expense-read.component';
+import {
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS,
+} from '@angular/material/dialog';
+import { DialogPayExpenseComponent } from './components/dialog-pay-expense/dialog-pay-expense.component';
 
 registerLocaleData(ptBr);
 
@@ -57,6 +62,7 @@ registerLocaleData(ptBr);
     ExpenseCreateComponent,
     ExpenseEditComponent,
     ExpenseDeleteComponent,
+    DialogPayExpenseComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,12 +83,15 @@ registerLocaleData(ptBr);
     MatProgressSpinnerModule,
     MatSnackBarModule,
     HttpClientModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [
     MatDatepickerModule,
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
   ],
   bootstrap: [AppComponent],
 })

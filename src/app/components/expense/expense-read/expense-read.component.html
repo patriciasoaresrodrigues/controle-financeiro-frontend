@@ -20,9 +20,16 @@
       <th mat-header-cell *matHeaderCellDef>Data Pagamento</th>
       <td mat-cell *matCellDef="let row">{{row.payDate | date:'dd/MM/yyyy'}}</td>
     </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let row">{{getStatus(row)}}</td>
+    </ng-container>
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
+        <a (click)="row.payDate ? null : openDialog(row)" [class.disabled]="row.payDate" class="pay">
+          <i class="material-icons">price_check</i>
+        </a>
         <a routerLink="/despesas/atualizar/{{row.id}}" class="edit">
           <i class="material-icons">edit</i>
         </a>

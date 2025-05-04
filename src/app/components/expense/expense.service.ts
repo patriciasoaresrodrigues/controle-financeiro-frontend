@@ -52,8 +52,14 @@ export class ExpenseService {
       catchError((e) => this.errorHandler(e))
     );
   }
-
   delete(id: string): Observable<Expense> {
     return this.http.delete<Expense>(`${this.baseUrl}/${id}`);
+  }
+
+  updatePayDate(expense: any): Observable<Expense> {
+    return this.http.patch<any>(`${this.baseUrl}/${expense.id}`, expense).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
   }
 }

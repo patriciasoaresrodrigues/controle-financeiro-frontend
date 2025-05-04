@@ -1,10 +1,18 @@
+i {
+  margin-right: 8px;
+}
+
 .edit {
   text-decoration: none;
-  color: #21845e;
+  color: #213d84;
 }
 .delete {
   text-decoration: none;
   color: #e35e6b;
+}
+.pay {
+  text-decoration: none;
+  color: #21845e;
 }
 .spinner {
   margin: 5px 10px 0 0;
@@ -12,4 +20,10 @@
   justify-content: center;
   align-items: center;
   background: white;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
